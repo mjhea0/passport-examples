@@ -22,11 +22,11 @@ In this post we'll add social authentication - Facebook, Twitter, Github, and Go
 
 1. Download the starter template
 
-```shell
+ ```shell
  $ git clone git@github.com:mjhea0/node-bootstrap3-template.git passport-examples
  $ cd passport-examples
  $ npm install
-```
+ ```
 
 2. Test locally
 
