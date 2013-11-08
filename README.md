@@ -85,7 +85,7 @@ Register your application (or in this case a dummy application) with all of the 
      clientID: 'get_your_own',
      clientSecret: 'get_your_own',
      callbackURL: "http://127.0.0.1:1337/auth/github/callback"
-   }
+   },
    google: {
      returnURL: 'http://127.0.0.1:1337/auth/google/callback',
      realm: 'http://127.0.0.1:1337'
