@@ -33,6 +33,8 @@ In this post we'll add social authentication - Facebook, Twitter, Github, and Go
  ```shell
  $ node app
  ```
+ 
+ Navigate to [http://localhost:1337/](http://localhost:1337/)
 
 3. Install additional dependendencies:
 
