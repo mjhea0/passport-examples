@@ -3,11 +3,11 @@ var fs = require('fs');
 var express = require('express');
 var routes = require('./routes');
 var path = require('path');
-var config = require('./oauth.js')
-var User = require('./user.js')
-var mongoose = require('mongoose')
-var passport = require('passport')
-var auth = require('./authentication.js')
+var config = require('./oauth.js');
+var User = require('./user.js');
+var mongoose = require('mongoose');
+var passport = require('passport');
+var auth = require('./authentication.js');
 
 // connect to the database
 mongoose.connect('mongodb://localhost/passport-example');
@@ -35,9 +35,9 @@ passport.serializeUser(function(user, done) {
 });
 passport.deserializeUser(function(id, done) {
     User.findById(id, function(err, user){
-        console.log(user)
+        console.log(user);
         if(!err) done(null, user);
-        else done(err, null)  
+        else done(err, null);
     })
 });
 
@@ -100,7 +100,7 @@ app.listen(1337);
 // test authentication
 function ensureAuthenticated(req, res, next) {
   if (req.isAuthenticated()) { return next(); }
-  res.redirect('/')
+  res.redirect('/');
 }
 
 module.exports = app
