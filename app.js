@@ -6,6 +6,7 @@ var path = require('path');
 var config = require('./oauth.js');
 var User = require('./user.js');
 var mongoose = require('mongoose');
+//This dependacy will be use for authentication by passport
 var passport = require('passport');
 var auth = require('./authentication.js');
 
