@@ -6,6 +6,6 @@ I would like to thanks mherman, for sharing this such code
 -Final project:
 +### Final project:
  
+ Added Login with Instagram
  
- ![fb](https://raw.github.com/mjhea0/passport-examples/master/public/img/final.png)
  ![fb](https://raw.github.com/mjhea0/passport-examples/master/public/img/final.png)
