@@ -11,7 +11,7 @@ var auth = require('./authentication.js');
 
 // connect to the database
 mongoose.connect('mongodb://localhost/passport-example');
-
+//This is going to connect with dartabase 
 var app = express();
 
 app.configure(function() {
