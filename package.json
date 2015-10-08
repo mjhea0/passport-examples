@@ -22,17 +22,18 @@
   "author": "Michael Herman <michael@mherman.org>",
   "license": "MIT",
   "dependencies": {
+    "chai": "~1.8.1",
     "express": "~3.3.4",
     "jade": "~0.34.1",
+    "mocha": "~1.14.0",
     "mongoose": "~3.8.0",
     "passport": "~0.1.17",
     "passport-facebook": "~1.0.1",
-    "passport-twitter": "~1.0.2",
     "passport-github": "~0.1.5",
     "passport-google": "~0.3.0",
-    "mocha": "~1.14.0",
-    "should": "~2.0.2",
-    "chai": "~1.8.1",
-    "phantom": "~0.5.4"
+    "passport-instagram": "^1.0.0",
+    "passport-twitter": "~1.0.2",
+    "phantom": "~0.5.4",
+    "should": "~2.0.2"
   }
 }
