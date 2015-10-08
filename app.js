@@ -90,6 +90,16 @@ app.get('/auth/google/callback',
   function(req, res) {
     res.redirect('/account');
   });
+app.get('/auth/instagram',
+  passport.authenticate('instagram'),
+  function(req, res){
+  });
+
+app.get('/auth/instagram/callback', 
+  passport.authenticate('instagram', { failureRedirect: '/' }), function(req, res) {
+    res.redirect('/account');
+  });
+
 app.get('/logout', function(req, res){
   req.logout();
   res.redirect('/');
