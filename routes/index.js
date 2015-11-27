@@ -1,7 +1,7 @@
 var path = require("path");
 
 exports.index = function(req, res){
-  res.render('index', { title: "Passport-Examples"});
+  res.render('index', { title: "Start Bootstrap"});
 };
 
 exports.ping = function(req, res){

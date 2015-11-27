@@ -1,6 +1,6 @@
-var should = require("should");
+var should = require('should');
 var mongoose = require('mongoose');
-var User = require("../user.js");
+var User = require('../user.js');
 var db;
 
 describe('User', function() {
@@ -11,12 +11,13 @@ describe('User', function() {
   });
 
   after(function(done) {
-    mongoose.connection.close()
+    mongoose.connection.close();
     done();
   });
 
   beforeEach(function(done) {
-	  var user = new User({
+
+    var user = new User({
       oauthID: 12345,
       name: 'testy',
       created: Date.now()
@@ -27,16 +28,7 @@ describe('User', function() {
       else console.log('no error');
       done();
     });
-  });
 
-  it('find a user by username', function(done) {
-    User.findOne({ oauthID: 12345, name: "testy" }, function(err, user) {
-      user.name.should.eql('testy');
-      user.oauthID.should.eql(12345)
-      console.log("		name: ", user.name)
-      console.log("		oauthID: ", user.oauthID)
-      done();
-    });
   });
 
   afterEach(function(done) {
@@ -45,5 +37,14 @@ describe('User', function() {
     });
   });
 
-});
+  it('find a user by username', function(done) {
+    User.findOne({ oauthID: 12345, name: "testy" }, function(err, user) {
+      user.name.should.eql('testy');
+      user.oauthID.should.eql(12345);
+      console.log("   name: ", user.name);
+      console.log("   oauthID: ", user.oauthID);
+      done();
+    });
+  });
 
+});
