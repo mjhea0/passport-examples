@@ -6,12 +6,13 @@ var path = require('path');
 var config = require('./oauth.js');
 var User = require('./user.js');
 var mongoose = require('mongoose');
+//This dependacy will be use for authentication by passport
 var passport = require('passport');
 var auth = require('./authentication.js');
 
 // connect to the database
 mongoose.connect('mongodb://localhost/passport-example');
-
+//This is going to connect with dartabase 
 var app = express();
 
 app.configure(function() {
@@ -89,6 +90,16 @@ app.get('/auth/google/callback',
   function(req, res) {
     res.redirect('/account');
   });
+app.get('/auth/instagram',
+  passport.authenticate('instagram'),
+  function(req, res){
+  });
+
+app.get('/auth/instagram/callback', 
+  passport.authenticate('instagram', { failureRedirect: '/' }), function(req, res) {
+    res.redirect('/account');
+  });
+
 app.get('/logout', function(req, res){
   req.logout();
   res.redirect('/');
