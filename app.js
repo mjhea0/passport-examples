@@ -8,10 +8,6 @@ var User = require('./user.js');
 var mongoose = require('mongoose');
 var passport = require('passport');
 var fbAuth = require('./authentication.js');
-var TwitterStrategy = require('passport-twitter').Strategy;
-var GithubStrategy = require('passport-github2').Strategy;
-var GoogleStrategy = require('passport-google-oauth2').Strategy;
-var InstagramStrategy = require('passport-instagram').Strategy;
 
 // connect to the database
 mongoose.connect('mongodb://localhost/passport-example');
